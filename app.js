@@ -23,7 +23,7 @@ function takeOrder() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const order = {
-        burgers: [dishes[Math.floor(Math.random() * arrayOfDishes.length)], arrayOfDishes[Math.floor(Math.random() * arrayOfDishes.length)], arrayOfDishes[Math.floor(Math.random() * arrayOfDishes.length)]]
+        burgers: [dishes[Math.floor(Math.random() * dishes.length)], dishes[Math.floor(Math.random() * dishes.length)], dishes[Math.floor(Math.random() * dishes.length)]]
         
       };
       console.log(order.burgers);
@@ -52,7 +52,6 @@ function thankyouFnc() {
   alert("Thank you for eating with us today!");
 }
  
-// Attach event listener to order button
 const orderBtn = document.getElementById("order-btn");
 orderBtn.addEventListener("click", async () => {
   try {
@@ -73,4 +72,3 @@ orderBtn.addEventListener("click", async () => {
   }
 });
  
-// Call getMenu function on page loa
